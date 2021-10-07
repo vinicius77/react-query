@@ -5,6 +5,7 @@ import Home from './components/pages/Home';
 import Products from './components/pages/Products';
 import RQProducts from './components/pages/RQProducts';
 import { QueryClientProvider as Provider, QueryClient } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 
 const rqClient = new QueryClient();
 
@@ -21,6 +22,7 @@ function App() {
 					</Switch>
 				</Fragment>
 			</Router>
+			<ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
 		</Provider>
 	);
 }
