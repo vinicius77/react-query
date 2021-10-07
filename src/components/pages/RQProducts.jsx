@@ -23,12 +23,12 @@ const RQProducts = () => {
 			setData(() => {
 				return { isLoading: false, error: null, products: camelizeKeys(data) };
 			});
-		} catch (error) {
+		} catch ({ message }) {
 			setData(() => {
 				return {
 					products: [],
 					isLoading: false,
-					error: 'Error Fetching',
+					error: message,
 				};
 			});
 		}

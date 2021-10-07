@@ -11,7 +11,7 @@ const Products = () => {
 		<div>
 			<h2>Products with RQ</h2>
 			{isLoading && <div>Loading ...</div>}
-			{error && <div>{error}</div>}
+			{error && <div>{error.message}</div>}
 
 			{data?.data &&
 				data.data.map((product) => <h3 key={product._id.$oid}>{product.product_name}</h3>)}
