@@ -5,7 +5,10 @@ import { useQuery } from 'react-query';
 const fetchProducts = () => axios.get('http://localhost:4000/products');
 
 const Products = () => {
-	const { data, error, isLoading } = useQuery('products', fetchProducts);
+	const { data, error, isLoading } = useQuery('products', fetchProducts, {
+		cacheTime: 3500,
+		staleTime: 30000,
+	});
 
 	return (
 		<div>
