@@ -6,8 +6,10 @@ const fetchProducts = () => axios.get('http://localhost:4000/products');
 
 const Products = () => {
 	const { data, error, isLoading } = useQuery('products', fetchProducts, {
-		cacheTime: 3500,
-		staleTime: 30000,
+		cacheTime: 3500, // default 5min
+		staleTime: 30000, // default 0 sec
+		refetchOnMount: 'always', // default true
+		refetchOnWindowFocus: true, // refetch when the changes, for example
 	});
 
 	return (
