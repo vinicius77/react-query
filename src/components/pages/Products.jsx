@@ -10,6 +10,9 @@ const Products = () => {
 		staleTime: 30000, // default 0 sec
 		refetchOnMount: 'always', // default true
 		refetchOnWindowFocus: true, // refetch when the changes, for example
+		// Polling settings
+		refetchInterval: 60000,
+		refetchIntervalInBackground: true, // Background Refetching
 	});
 
 	return (
