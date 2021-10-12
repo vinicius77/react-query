@@ -2,7 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { useQuery } from 'react-query';
 
-const fetchProducts = () => axios.get('http://localhost:4000/products');
+const fetchProducts = () => axios.get('http://localhost:4000/poducts');
+const onSuccess = (data) => console.log(data.data.length);
+const onError = (error) => console.log(error.message);
 
 const Products = () => {
 	const { data, error, isLoading, refetch, isFetching } = useQuery('products', fetchProducts, {
@@ -15,6 +17,9 @@ const Products = () => {
 		refetchIntervalInBackground: true, // Background Refetching*/
 		// useQueryOnClick
 		enabled: false,
+		// Callbacks
+		onSuccess,
+		onError,
 	});
 
 	return (
