@@ -5,24 +5,29 @@ import { useQuery } from 'react-query';
 const fetchProducts = () => axios.get('http://localhost:4000/products');
 
 const Products = () => {
-	const { data, error, isLoading } = useQuery('products', fetchProducts, {
-		cacheTime: 3500, // default 5min
+	const { data, error, isLoading, refetch, isFetching } = useQuery('products', fetchProducts, {
+		/*cacheTime: 3500, // default 5min
 		staleTime: 30000, // default 0 sec
 		refetchOnMount: 'always', // default true
 		refetchOnWindowFocus: true, // refetch when the changes, for example
 		// Polling settings
 		refetchInterval: 60000,
-		refetchIntervalInBackground: true, // Background Refetching
+		refetchIntervalInBackground: true, // Background Refetching*/
+		// useQueryOnClick
+		enabled: false,
 	});
 
 	return (
 		<div>
 			<h2>Products with RQ</h2>
-			{isLoading && <div>Loading ...</div>}
+			{(isLoading || isFetching) && <div>Loading ...</div>}
 			{error && <div>{error.message}</div>}
 
 			{data?.data &&
 				data.data.map((product) => <h3 key={product._id.$oid}>{product.product_name}</h3>)}
+			<button onClick={() => refetch()} disabled={isFetching}>
+				Fetch Data On Click
+			</button>
 		</div>
 	);
 };
