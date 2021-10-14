@@ -1,8 +1,6 @@
 import React from 'react';
-import axios from 'axios';
-import { useQuery } from 'react-query';
+import { useFetchData } from '../../customHooks/useFetchData';
 
-const fetchProducts = () => axios.get('http://localhost:4000/products');
 const onSuccess = (data) => console.log(data.length); // select affects the way onSuccess works
 const onError = (error) => console.log(error.message);
 const select = ({ data }) => {
@@ -10,22 +8,26 @@ const select = ({ data }) => {
 	return productNamesArray;
 };
 
-const Products = () => {
-	const { data, error, isLoading, refetch, isFetching } = useQuery('products', fetchProducts, {
-		/*cacheTime: 3500, // default 5min
+const options = {
+	/*cacheTime: 3500, // default 5min
 		staleTime: 30000, // default 0 sec
 		refetchOnMount: 'always', // default true
 		refetchOnWindowFocus: true, // refetch when the changes, for example
 		// Polling settings
 		refetchInterval: 60000,
 		refetchIntervalInBackground: true, // Background Refetching*/
-		// useQueryOnClick
-		enabled: false,
-		// Callbacks
-		onSuccess,
-		onError,
-		select, // Transform data example
-	});
+	// useQueryOnClick
+	enabled: false,
+	// Callbacks
+	onSuccess,
+	onError,
+	select, // Transform data example
+	url: 'http://localhost:4000/products',
+	queryId: 'products',
+};
+
+const Products = () => {
+	const { data, error, isLoading, refetch, isFetching } = useFetchData(options);
 
 	return (
 		<div>
