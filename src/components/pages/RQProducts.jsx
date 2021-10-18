@@ -44,7 +44,7 @@ const RQProducts = () => {
 			{data.error && <h4>{data.error}</h4>}
 			{data.isLoading && <h4>Loading ...</h4>}
 			{data.products?.map((product) => {
-				return <div key={product.id.$oid}>{product.productName}</div>;
+				return <div key={product.id}>{product.productName}</div>;
 			})}
 		</div>
 	);

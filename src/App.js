@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import Products from './components/pages/Products';
 import RQProducts from './components/pages/RQProducts';
+import { RQProduct } from './components/pages/RQProduct';
 import { QueryClientProvider as Provider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
@@ -17,7 +18,8 @@ function App() {
 					<Navbar />
 					<Switch>
 						<Route path="/" exact component={Home} />
-						<Route path="/products" component={Products} />
+						<Route path="/products" exact component={Products} />
+						<Route path="/products/:id" component={RQProduct} />
 						<Route path="/rq-products" component={RQProducts} />
 					</Switch>
 				</Fragment>
