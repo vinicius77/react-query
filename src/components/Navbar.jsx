@@ -18,6 +18,9 @@ export const Navbar = () => {
 					<li>
 						<Link to="/parallel">Parallel Queries</Link>
 					</li>
+					<li>
+						<Link to="/dynamic">Dynamic Queries</Link>
+					</li>
 				</ul>
 			</nav>
 		</div>
