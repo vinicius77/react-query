@@ -33,6 +33,7 @@ const Products = () => {
 	return (
 		<div>
 			<h2>Products with RQ</h2>
+
 			{(isLoading || isFetching) && <div>Loading ...</div>}
 			{error && <div>{error.message}</div>}
 

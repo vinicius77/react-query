@@ -7,6 +7,8 @@ import RQProducts from './components/pages/RQProducts';
 import { RQProduct } from './components/pages/RQProduct';
 import { QueryClientProvider as Provider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import ParallelQueries from './components/pages/ParallelQueries';
+import './App.css';
 
 const rqClient = new QueryClient();
 
@@ -21,6 +23,7 @@ function App() {
 						<Route path="/products" exact component={Products} />
 						<Route path="/products/:id" component={RQProduct} />
 						<Route path="/rq-products" component={RQProducts} />
+						<Route path="/parallel" component={ParallelQueries} />
 					</Switch>
 				</Fragment>
 			</Router>

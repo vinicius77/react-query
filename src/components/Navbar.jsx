@@ -5,7 +5,7 @@ export const Navbar = () => {
 	return (
 		<div>
 			<nav>
-				<ul>
+				<ul className="nav-items" style={{ display: 'flex', listStyle: 'none' }}>
 					<li>
 						<Link to="/">Home</Link>
 					</li>
@@ -13,7 +13,10 @@ export const Navbar = () => {
 						<Link to="/products">Products</Link>
 					</li>
 					<li>
-						<Link to="rq-products">React-Query Products</Link>
+						<Link to="/rq-products">React-Query Products</Link>
+					</li>
+					<li>
+						<Link to="/parallel">Parallel Queries</Link>
 					</li>
 				</ul>
 			</nav>

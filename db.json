@@ -18,5 +18,12 @@
     "supplier": "Schmitt-Weissnat",
     "quantity": 211,
     "unit_cost": "$20.53"
-  }]
+  }],
+  "characters": [
+    { "id": "10", "name": "Ness", "item": "baseball bat" },
+    { "id": "11", "name": "Yoshi", "item": "egg" },
+    { "id": "12", "name": "Fox MCloud", "item": "laser gun" },
+    { "id": "13", "name": "Link", "item": "Hyrule sword" }
+    
+  ]
 }
