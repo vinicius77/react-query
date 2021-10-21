@@ -25,5 +25,18 @@
     { "id": "12", "name": "Fox MCloud", "item": "laser gun" },
     { "id": "13", "name": "Link", "item": "Hyrule sword" }
     
+  ],
+  "users": [
+    { 
+      "id": "vbonifacio@faang.com",
+      "name": "vinicius",
+      "courseId": 19
+    }
+  ],
+  "courses": [
+    { 
+      "id": 19,
+      "subject": ["react", "ruby", "JavaScript"]
+    }
   ]
 }

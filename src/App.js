@@ -10,6 +10,7 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 import ParallelQueries from './components/pages/ParallelQueries';
 import DynamicQueries from './components/pages/DynamicQueries';
 import './App.css';
+import DependentQueries from './components/pages/DependentQueries';
 
 const rqClient = new QueryClient();
 
@@ -27,6 +28,9 @@ function App() {
 						<Route path="/parallel" component={ParallelQueries} />
 						<Route path="/dynamic">
 							<DynamicQueries charIds={[10, 12]} />
+						</Route>
+						<Route path="/dependent">
+							<DependentQueries email="vbonifacio@faang.com" />
 						</Route>
 					</Switch>
 				</Fragment>

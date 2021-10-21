@@ -21,6 +21,9 @@ export const Navbar = () => {
 					<li>
 						<Link to="/dynamic">Dynamic Queries</Link>
 					</li>
+					<li>
+						<Link to="/dependent">Dependent Queries</Link>
+					</li>
 				</ul>
 			</nav>
 		</div>
