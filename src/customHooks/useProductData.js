@@ -1,5 +1,7 @@
 import axios from 'axios';
-import { useQuery } from 'react-query';
+import { useQuery, useQueryClient } from 'react-query';
+
+/** Initial (Query) Data ("products" queryId) */
 
 const fetchData = async ({ queryKey }) => {
 	const id = queryKey[1];
@@ -7,5 +9,14 @@ const fetchData = async ({ queryKey }) => {
 };
 
 export const useProductData = (id) => {
-	return useQuery(['product', id], fetchData);
+	const queryClient = useQueryClient();
+	return useQuery(['product', id], fetchData, {
+		initialData: () => {
+			const product = queryClient
+				.getQueryData('products') // the query id from the list (products)
+				?.data?.find((product) => product.id === parseInt(id));
+
+			return product ? product : null;
+		},
+	});
 };
