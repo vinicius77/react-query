@@ -38,5 +38,14 @@
       "id": 19,
       "subject": ["react", "ruby", "JavaScript"]
     }
+  ],
+  "languages": [
+    { "id": 12, "name": "Ruby" },
+    { "id": 13, "name": "JavaScript" },
+    { "id": 14, "name": "TypeScript" },
+    { "id": 15, "name": "Python" },
+    { "id": 16, "name": "C" },
+    { "id": 17, "name": "Dart" },
+    { "id": 18, "name": "Elixir" }
   ]
 }
