@@ -12,6 +12,7 @@ import DynamicQueries from './components/pages/DynamicQueries';
 import './App.css';
 import DependentQueries from './components/pages/DependentQueries';
 import PaginatedQueries from './components/pages/PaginatedQueries';
+import InfiniteQueries from './components/pages/InfiniteQueries';
 
 const rqClient = new QueryClient();
 
@@ -34,6 +35,7 @@ function App() {
 							<DependentQueries email="vbonifacio@faang.com" />
 						</Route>
 						<Route path="/paginated-queries" component={PaginatedQueries} />
+						<Route path="/infinite-queries" component={InfiniteQueries} />
 					</Switch>
 				</Fragment>
 			</Router>
