@@ -1,51 +1,150 @@
 {
-  "products": [{
-    "id":  "5968dd23fc13ae04d9000001",    
-    "product_name": "sildenafil citrate",
-    "supplier": "Wisozk Inc",
-    "quantity": 261,
-    "unit_cost": "$10.47"
-  }, {
-    "id": 
-       "5968dd23fc13ae04d9000002",
-    "product_name": "Mountain Juniperus ashei",
-    "supplier": "Keebler-Hilpert",
-    "quantity": 292,
-    "unit_cost": "$8.74"
-  }, {
-    "id": "5968dd23fc13ae04d9000003",
-    "product_name": "Dextromathorphan HBr",
-    "supplier": "Schmitt-Weissnat",
-    "quantity": 211,
-    "unit_cost": "$20.53"
-  }],
+  "products": [
+    {
+      "id": "5968dd23fc13ae04d9000001",
+      "product_name": "sildenafil citrate",
+      "supplier": "Wisozk Inc",
+      "quantity": 261,
+      "unit_cost": "$10.47"
+    },
+    {
+      "id": "5968dd23fc13ae04d9000002",
+      "product_name": "Mountain Juniperus ashei",
+      "supplier": "Keebler-Hilpert",
+      "quantity": 292,
+      "unit_cost": "$8.74"
+    },
+    {
+      "id": "5968dd23fc13ae04d9000003",
+      "product_name": "Dextromathorphan HBr",
+      "supplier": "Schmitt-Weissnat",
+      "quantity": 211,
+      "unit_cost": "$20.53"
+    },
+    {
+      "product_name": "Nitendo",
+      "supplier": "Nintendo",
+      "quantity": "22",
+      "unit_cost": "$200",
+      "id": 345892
+    },
+    {
+      "product_name": "Xbox",
+      "supplier": "Microsoft",
+      "quantity": "56",
+      "unit_cost": "25",
+      "id": 216577
+    },
+    {
+      "product_name": "Playstation 2",
+      "supplier": "Sony",
+      "quantity": "15",
+      "unit_cost": "$200",
+      "id": 549660
+    },
+    {
+      "product_name": "Snes",
+      "supplier": "Nintendo",
+      "quantity": "12",
+      "unit_cost": "$500",
+      "id": 89405
+    },
+    {
+      "product_name": "Shoes",
+      "supplier": "Vans",
+      "quantity": "11",
+      "unit_cost": "$55",
+      "id": 1951742
+    },
+    {
+      "product_name": "Shirt",
+      "supplier": "Fred Perry",
+      "quantity": "2",
+      "unit_cost": "$50",
+      "id": 181810
+    },
+    {
+      "product_name": "Headphones",
+      "supplier": "Sony",
+      "quantity": "5",
+      "unit_cost": "$20",
+      "id": 4226360
+    },
+    {
+      "product_name": "Food",
+      "supplier": "Foodora",
+      "quantity": "1",
+      "unit_cost": "$10",
+      "id": 312337
+    }
+  ],
   "characters": [
-    { "id": "10", "name": "Ness", "item": "baseball bat" },
-    { "id": "11", "name": "Yoshi", "item": "egg" },
-    { "id": "12", "name": "Fox MCloud", "item": "laser gun" },
-    { "id": "13", "name": "Link", "item": "Hyrule sword" }
-    
+    {
+      "id": "10",
+      "name": "Ness",
+      "item": "baseball bat"
+    },
+    {
+      "id": "11",
+      "name": "Yoshi",
+      "item": "egg"
+    },
+    {
+      "id": "12",
+      "name": "Fox MCloud",
+      "item": "laser gun"
+    },
+    {
+      "id": "13",
+      "name": "Link",
+      "item": "Hyrule sword"
+    }
   ],
   "users": [
-    { 
+    {
       "id": "vbonifacio@faang.com",
       "name": "vinicius",
       "courseId": 19
     }
   ],
   "courses": [
-    { 
+    {
       "id": 19,
-      "subject": ["react", "ruby", "JavaScript"]
+      "subject": [
+        "react",
+        "ruby",
+        "JavaScript"
+      ]
     }
   ],
   "languages": [
-    { "id": 12, "name": "Ruby" },
-    { "id": 13, "name": "JavaScript" },
-    { "id": 14, "name": "TypeScript" },
-    { "id": 15, "name": "Python" },
-    { "id": 16, "name": "C" },
-    { "id": 17, "name": "Dart" },
-    { "id": 18, "name": "Elixir" }
+    {
+      "id": 12,
+      "name": "Ruby"
+    },
+    {
+      "id": 13,
+      "name": "JavaScript"
+    },
+    {
+      "id": 14,
+      "name": "TypeScript"
+    },
+    {
+      "id": 15,
+      "name": "Python"
+    },
+    {
+      "id": 16,
+      "name": "C"
+    },
+    {
+      "id": 17,
+      "name": "Dart"
+    },
+    {
+      "id": 18,
+      "name": "Elixir"
+    }
   ]
 }
